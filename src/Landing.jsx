@@ -43,7 +43,7 @@ const Landing = () => {
 
   function triggerAnimation() {
     spline.current.emitEvent("mouseDown", "ENTER");
-    setHideText(true)
+    setHideText(true);
     const waitToTransition = setTimeout(() => {
       setClicked(true);
     }, 1000);
@@ -55,37 +55,24 @@ const Landing = () => {
       {!clicked ? (
         <div className="h-screen overflow-hidden relative">
           <Spline
-            id="splineID"
             className={`${
               fadeIn ? "opacity-100" : "opacity-0"
             } transition-opacity duration-500 `}
             scene="https://prod.spline.design/GC7oSYPpKQCkjpYD/scene.splinecode"
             onLoad={onLoad}
           />
-            {!hideText ? (  <span
-            onClick={triggerAnimation}
-            className="cursor-pointer h-6 w-[90px] text-[20px] text-[white] absolute left-[calc(50%-35px)] bottom-[100px]"
-          >
-            ENTER
-          </span>) : null}
-        
+          {!hideText ? (
+            <span
+              onClick={triggerAnimation}
+              className="cursor-pointer h-6 w-[90px] text-[20px] text-[white] absolute left-[calc(50%-35px)] bottom-[100px] font-['Raleway'] hover:font-sans animate-pulse hover:animate-none"
+            >
+              ENTER
+            </span>
+          ) : null}
         </div>
       ) : (
         <AdhypeMain />
       )}
-
-      {/* <div
-        className={`${
-          fadeIn ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-1000 w-full justify-center flex absolute bottom-[60px]`}
-      >
-        <span
-          onClick={handleClick}
-          className="text-white cursor-pointer font-jet animate-blink init text-[20px] transition-transform transform hover:scale-110"
-        >
-          ENTER...
-        </span>
-      </div> */}
     </>
   );
 };
