@@ -2,74 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'nikea';
+    src: url('./assets/fonts/NIKEA.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'momCake';
+    src: url('./assets/fonts/MomcakeThin-9Y6aZ.otf') format('truetype');
+}
+
+
 body {
     background-color: black;
 }
 
-.top-pic {
-    margin: 0;
-    padding: 0;
-    background-image: url("./assets/images/fever-shoot.png");
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.fade-container {
+    transition: opacity 2.5s ease;
 }
 
-.adhype-container {
-    position: absolute;
-    z-index: 1;
-    color: white;
-    height: 100vh;
-    width: 100%;
-    background: RGB(0, 0, 0, 0.5);
-    top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    h1 {
-        width: 100%;
-        color: white;
-    }
-
-    h2 {
-        width: 100%;
-        margin-bottom: 25%;
-        font-size: 2rem;
-        color: white;
-    }
+.fade-in {
+    opacity: 1;
 }
 
-.background {
-    margin: 0;
-    padding: 0;
-    background-image: url("./assets/images/abstract-lines.jpeg");
-    background-position: top;
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+.fade-out {
+    opacity: 0;
 }
 
-
-
-.init {
-    -webkit-font-smoothing: antialiased;
-    text-transform: uppercase;
-    scroll-behavior: smooth;
-    font-weight: 400;
-    line-height: 24px;
-    text-shadow: rgba(255, 215, 77, 0.6) -1px -1px 6px,
-        rgba(124, 127, 255, 0.6) 1px 1px 6px;
-    overflow-wrap: break-word;
-    font-variant-ligatures: none;
-    margin: 0px;
-}
 
 @keyframes blink {
 
@@ -87,4 +46,117 @@ body {
 
 .animate-blink {
     animation: blink 3s infinite;
+}
+
+.fade-in-out {
+    opacity: 0;
+    animation: fadeInOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+/* Change this if you need to modify the amount of lines displayed */
+/* Leave these unless you want to open a whole can of worms */
+/* html {
+   background-color: #5138BE;
+   height: 100%;
+}
+
+body {
+   color: #FFFFFF;
+   display: flex;
+}
+
+.Words {
+   margin: 0 auto;
+   padding: 80px 0;
+   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+   font-size: 68px;
+   font-weight: 900;
+   letter-spacing: -2px;
+   text-transform: uppercase;
+   transform: translate3d(0, 0, 0);
+   -webkit-font-smoothing: antialiased;
+   -webkit-font-kerning: normal;
+   -webkit-text-size-adjust: 100%;
+}
+
+.Words-line {
+   height: 50px;
+   overflow: hidden;
+   position: relative;
+}
+
+.Words-line:nth-child(odd) {
+   transform: skew(60deg, -30deg) scaleY(.66667);
+}
+
+.Words-line:nth-child(even) {
+   transform: skew(0deg, -30deg) scaleY(1.33333);
+}
+
+.Words-line:nth-child(1) {
+   left: 29px;
+}
+
+.Words-line:nth-child(2) {
+   left: 58px;
+}
+
+.Words-line:nth-child(3) {
+   left: 87px;
+}
+
+.Words-line:nth-child(4) {
+   left: 116px;
+}
+
+.Words-line:nth-child(5) {
+   left: 145px;
+}
+
+.Words-line:nth-child(6) {
+   left: 174px;
+}
+
+p {
+   height: 50px;
+   line-height: 45px;
+   padding: 0 10px;
+   transition: all 0.4s ease-in-out;
+   transform: translate3d(0, 0, 0);
+   vertical-align: top;
+   white-space: nowrap;
+}
+
+.Words:hover p {
+   transform: translate3d(0, -50px, 0);
+} */
+
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:900');
+
+
+
+#ui {
+    color: #FFF;
+    font-family: "Kanit";
+    font-size: 60px;
+    line-height: 1em;
 }
