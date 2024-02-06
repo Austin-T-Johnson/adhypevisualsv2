@@ -2,6 +2,18 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    screens: {
+      /* ----- min-w = min-width breakpoint ----- */
+      "4k": "3840px",
+      "2xl": "1535px",
+      xl: "1279px",
+      lg: "1023px",
+      md: "834px",
+      sm: "640px",
+      "x-sm": "375px",
+      "xx-sm": "280px",
+      "min-w-md": "835px",
+    },
     extend: {
       fontFamily: {
         jet: ["JetBrains Mono", "monospace"],

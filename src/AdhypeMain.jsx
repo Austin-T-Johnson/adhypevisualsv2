@@ -85,37 +85,40 @@ const AdhypeMain = () => {
       <div
         className={`${
           fadeIn ? "opacity-100" : "opacity-0"
-        } relative transition-opacity duration-500 min-h-screen`}
+        } transition-opacity duration-500 min-h-screen`}
       >
-        <spline-viewer url="https://prod.spline.design/9iEO6dhzbeICjWEI/scene.splinecode"></spline-viewer>
-        <div
-          className={`absolute top-[calc(57%)] right-[calc(46.5%)] flex flex-col text-center font-['Raleway'] gap-2`}
-        >
-          <Link to="section1" smooth={true} duration={500}>
-            <span className="text-[white] cursor-pointer hover:font-sans">
-              Visual Content
-            </span>
-          </Link>
-          <Link to="section2" smooth={true} duration={500}>
-            <span className="text-[white] cursor-pointer hover:font-sans">
-              Creative Direction
-            </span>
-          </Link>
-          <Link to="section3" smooth={true} duration={500}>
-            <span className="text-[white] cursor-pointer hover:font-sans">
-              Graphic Design
-            </span>
-          </Link>
-          <Link to="section4" smooth={true} duration={500}>
-            <span className="text-[white] cursor-pointer hover:font-sans">
-              Web/App Development
-            </span>
-          </Link>
-          <Link to="section5" smooth={true} duration={500}>
-            <span className="text-[white] cursor-pointer hover:font-sans">
-              Contact
-            </span>
-          </Link>
+        <div className="relative flex justify-center items-center x-sm:w-full x-sm:pt-[150px]">
+          <spline-viewer url="https://prod.spline.design/9iEO6dhzbeICjWEI/scene.splinecode"></spline-viewer>
+
+          <div
+            className={`absolute top-[calc(57%)] right-[calc(45.75%)] flex flex-col text-center font-['Raleway'] gap-2 4k:top-[calc(54%)] 4k:right-[calc(47.75%)]`}
+          >
+            <Link to="section1" smooth={true} duration={500}>
+              <span className="text-[white] cursor-pointer hover:font-sans">
+                Visual Content
+              </span>
+            </Link>
+            <Link to="section2" smooth={true} duration={500}>
+              <span className="text-[white] cursor-pointer hover:font-sans">
+                Creative Direction
+              </span>
+            </Link>
+            <Link to="section3" smooth={true} duration={500}>
+              <span className="text-[white] cursor-pointer hover:font-sans">
+                Graphic Design
+              </span>
+            </Link>
+            <Link to="section4" smooth={true} duration={500}>
+              <span className="text-[white] cursor-pointer hover:font-sans">
+                Web/App Development
+              </span>
+            </Link>
+            <Link to="section5" smooth={true} duration={500}>
+              <span className="text-[white] cursor-pointer hover:font-sans">
+                Contact
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
       <Element name="section1">
@@ -137,8 +140,8 @@ const AdhypeMain = () => {
                 </span>
               ))}
             </div>
-            <div className="w-[560px] absolute top-[5%] left-[5%]">
-              <span className="text-[white] text-[35px] font-['momCake'] text-shadow-lg shadow-[black]">
+            <div className="w-[560px] 4k:w-[650px] absolute top-[5%] left-[5%]">
+              <span className="text-[white] text-[35px] 4k:text-[50px] font-['momCake'] text-shadow-lg shadow-[black]">
                 Specializing in visual content creation we leverage creativity
                 and technical skill to bring ideas to life through compelling
                 visuals.
@@ -156,15 +159,15 @@ const AdhypeMain = () => {
               CREATIVE DIRECTION
             </span>
           </div>
-          <div className="absolute top-1/3 left-[8%] w-[400px] text-center">
-            <span className="text-[white] text-[25px] font-['momCake']">
+          <div className="absolute top-1/3 left-[8%] 4k:left-0 w-[400px] 4k:w-[650px] text-center">
+            <span className="text-[white] text-[25px] 4k:text-[40px] font-['momCake']">
               It can be the difference between a successful brand and one that
               never takes off. It is a powerful tool, capable of helping you
               connect with your audience on a much deeper level.{" "}
             </span>
           </div>
-          <div className="absolute top-2/3 right-[5%] w-[400px] text-center">
-            <span className="text-[white] text-[25px] font-['momCake']">
+          <div className="absolute top-2/3 right-[5%] 4k:right-[1%] w-[400px] 4k:w-[650px] text-center">
+            <span className="text-[white] text-[25px] 4k:text-[40px] font-['momCake']">
               We combine our expertise in design, strategy, technology, and art
               to develop and empower your brand to its fullest potential.
             </span>
