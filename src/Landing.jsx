@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Spline from "@splinetool/react-spline";
 import AdhypeMain from "./AdhypeMain";
+import { useMediaQuery } from "react-responsive";
 const Landing = () => {
   const [fadeIn, setFadeIn] = useState(false);
   const [textFadeIn, setTextFadeIn] = useState(false);
@@ -8,6 +9,7 @@ const Landing = () => {
   const [clicked, setClicked] = useState(false);
   const [hideText, setHideText] = useState(false);
   const enterRef = useRef(null);
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   // Calculate the viewport height
   const viewportHeight = window.innerHeight;
   // Check if the user has scrolled past 100 viewport heights
@@ -54,13 +56,21 @@ const Landing = () => {
     <>
       {!clicked ? (
         <div className="h-screen overflow-hidden relative">
-          <Spline
-            className={`${
-              fadeIn ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-500 `}
-            scene="https://prod.spline.design/GC7oSYPpKQCkjpYD/scene.splinecode"
-            onLoad={onLoad}
-          />
+          {isMobile ? (
+            <Spline
+              scene="https://prod.spline.design/KhqbxzZoCq-yQ7OZ/scene.splinecode"
+              onLoad={onLoad}
+            />
+          ) : (
+            <Spline
+              className={`${
+                fadeIn ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-500 `}
+              scene="https://prod.spline.design/GC7oSYPpKQCkjpYD/scene.splinecode"
+              onLoad={onLoad}
+            />
+          )}
+
           {!hideText ? (
             <span
               onClick={triggerAnimation}
